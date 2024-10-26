@@ -4,80 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Store</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Simple Store</h1>
+    <div class="text-center mt-4">
+        <button class="btn btn-custom" onclick="addProduct()">Add New Product</button>
+    </div>
     <div class="container">
-        <div class="products">
-            <div class="product" data-name="Product 1" data-price="59.99">
-                <h2>Product 1</h2>
-                <p>$59.99</p>
-                <button onclick="addToCart(this)">Add to Cart</button>
-            </div>
-            <div class="product" data-name="Product 2" data-price="69.99">
-                <h2>Product 2</h2>
-                <p>$69.99</p>
-                <button onclick="addToCart(this)">Add to Cart</button>
-            </div>
-            <div class="product" data-name="Product 3" data-price="9.99">
-                <h2>Product 3</h2>
-                <p>$9.99</p>
-                <button onclick="addToCart(this)">Add to Cart</button>
-            </div>
-            <div class="product" data-name="Product 4" data-price="4.99">
-                <h2>Product 4</h2>
-                <p>$4.99</p>
-                <button onclick="addToCart(this)">Add to Cart</button>
-            </div>
-            <div class="product" data-name="Product 5" data-price="39.99">
-                <h2>Product 5</h2>
-                <p>$39.99</p>
-                <button onclick="addToCart(this)">Add to Cart</button>
-            </div>
-            <div class="product" data-name="Product 6" data-price="29.99">
-                <h2>Product 6</h2>
-                <p>$29.99</p>
-                <button onclick="addToCart(this)">Add to Cart</button>
-            </div>
-            <div class="product" data-name="Product 7" data-price="99.99">
-                <h2>Product 7</h2>
-                <p>$99.99</p>
-                <button onclick="addToCart(this)">Add to Cart</button>
-            </div>
-            <div class="product" data-name="Product 8" data-price="19.99">
-                <h2>Product 8</h2>
-                <p>$19.99</p>
-                <button onclick="addToCart(this)">Add to Cart</button>
-            </div>
-            <div class="product" data-name="Product 9" data-price="109.99">
-                <h2>Product 9</h2>
-                <p>$109.99</p>
-                <button onclick="addToCart(this)">Add to Cart</button>
-            </div>
-            <div class="product" data-name="Product 10" data-price="89.99">
-                <h2>Product 10</h2>
-                <p>$89.99</p>
-                <button onclick="addToCart(this)">Add to Cart</button>
-            </div>
-            <div class="product" data-name="Product 11" data-price="79.99">
-                <h2>Product 11</h2>
-                <p>$79.99</p>
-                <button onclick="addToCart(this)">Add to Cart</button>
-            </div>
-            <div class="product" data-name="Product 12" data-price="119.99">
-                <h2>Product 12</h2>
-                <p>$119.99</p>
-                <button onclick="addToCart(this)">Add to Cart</button>
-            </div>
+        <div class="products" id="products">
         </div>
         <div class="cart">
             <h2>Shopping Cart</h2>
-            <ul id="cartItems"></ul>
+            <ul id="cartItems" class="list-unstyled"></ul>
             <p>Total: $<span id="totalPrice">0</span></p>
-            <button onclick="resetCart()">Reset Cart</button>
+            <button class="btn btn-danger btn-block" onclick="resetCart()">Reset Cart</button>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
